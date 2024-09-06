@@ -1,73 +1,117 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
 }
 
 .container {
-    max-width: 800px;
-    margin: 50px auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
     padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
 h1, h2 {
     text-align: center;
+    margin-bottom: 20px;
     color: #333;
 }
 
 .form {
-    display: flex;
-    justify-content: space-between;
+    background-color: #eaeaea;
+    padding: 15px;
     margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.form label, .form input, .form select, .form button {
-    margin-right: 10px;
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
 }
 
-.form input, .form select {
+input[type="text"], input[type="date"], select {
+    width: 100%;
     padding: 10px;
-    width: 150px;
-}
-
-.form button {
-    padding: 10px 15px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
+    margin-bottom: 15px;
     border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
 }
 
-.form button:hover {
-    background-color: #218838;
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
-
-th {
-    background-color: #007bff;
+table thead {
+    background-color: #3498db;
     color: white;
 }
 
-tbody tr:nth-child(odd) {
-    background-color: #f2f2f2;
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    .form {
+        padding: 10px;
+    }
+
+    input[type="text"], input[type="date"], select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 14px;
+    }
 }
