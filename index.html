@@ -10,12 +10,24 @@
     <div class="container">
         <h1>Table Tennis Game Record</h1>
 
+        <!-- Form to add a player -->
         <div class="form">
+            <h2>Add Player</h2>
+            <input type="text" id="newPlayer" placeholder="Enter Player Name" required>
+            <button onclick="addPlayer()">Add Player</button>
+        </div>
+
+        <!-- Form to record a match -->
+        <div class="form">
+            <h2>Record Match</h2>
+            <label for="date">Match Date:</label>
+            <input type="date" id="date" required>
+
             <label for="player1">Player 1:</label>
-            <input type="text" id="player1" placeholder="Enter Player 1 Name" required>
+            <select id="player1" required></select>
 
             <label for="player2">Player 2:</label>
-            <input type="text" id="player2" placeholder="Enter Player 2 Name" required>
+            <select id="player2" required></select>
 
             <label for="winner">Winner:</label>
             <select id="winner">
@@ -27,11 +39,13 @@
             <button onclick="addRecord()">Add Record</button>
         </div>
 
+        <!-- Game records table -->
         <h2>Game Records</h2>
         <table id="recordsTable">
             <thead>
                 <tr>
                     <th>Match #</th>
+                    <th>Date</th>
                     <th>Player 1</th>
                     <th>Player 2</th>
                     <th>Winner</th>
@@ -41,8 +55,23 @@
                 <!-- Records will be dynamically added here -->
             </tbody>
         </table>
+
+        <!-- Player wins table -->
+        <h2>Player Wins</h2>
+        <table id="playerWinsTable">
+            <thead>
+                <tr>
+                    <th>Player Name</th>
+                    <th>Total Wins</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Player win records will be dynamically added here -->
+            </tbody>
+        </table>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+
